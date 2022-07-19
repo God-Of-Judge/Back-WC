@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Default stylesheets-->
+    <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template specific stylesheets-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="/resources/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Main stylesheet and color file-->
+    <link href="/resources/assets/css/style.css" rel="stylesheet">
+    <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
+
+    <!-- 모달 라이브러리 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+    /* 모달창 */
+    .modal {
+        text-align: center;
+        margin-top: 300px;
+        width: fit-content;
+        margin-left: 300px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .modal:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: " ";
+        }
+    }
+    .loadingModal {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    a{
+        color: black;
+    }
+
+    .modal_body{
+        background-color: white;
+    }
+
+    table, th{
+        text-align: center;
+    }
+
+    .body{
+        padding: 0 !important;
+    }
+    .modal-open { padding-right: 0px !important; }
+    .modal { padding-right: 0px !important; }
+
+    @font-face {
+        font-family: 'HallymGothic-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SEBANG_Gothic_Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    td a, button a{
+        font-family: 'HallymGothic-Regular',sans-serif;
+        font-size: 15px;
+    }
+
+
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        padding : 15px 0 ;
+    }
+
+</style>
+
+<body class="body" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+
+<th:block th:replace="fragment/head :: headFragment"></th:block>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+<div class="main">
+    <section class="module">
+        <div class="container">
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+                <section class="module-medium" id="contact">
+                    <h1></h1>
+
+                </section>
+            </div>
+
+            <br> <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 40px ">분석결과 페이지</h2>
+            <br>
+            <hr class="divider-w pt-20">
+<br>
+                <div class="col-sm-12">
+                    <table class="table table-striped table-border checkout-table">
+                        <tbody>
+                        <tr>
+                            <th></th>
+                            <th class="hidden-xs">NUM</th>
+                            <th class="hidden-xs">DATE</th>
+                            <th>RESULT</th>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>1</a></h5>
+                            </td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a href="write_view">2022.06.05</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a data-toggle="modal" href="#loadingModal">로딩중</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>2</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.06.11</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>로딩중</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>3</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.06.15</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>4</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.06.27</a></h5>
+                            </td>
+                            <td>
+                                <a href="result"><h5 class="product-title font-alt">분석완료</h5></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>5</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.07.01</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>6</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.09.11</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>7</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.09.11</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>8</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.09.11</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox" name="xxx" value="yyy" ></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>9</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.09.11</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-remove"><input type="checkbox"></td>
+                            <td class="hidden-xs">
+                                <h5 class="product-title font-alt"><a>10</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>2022.09.11</a></h5>
+                            </td>
+                            <td>
+                                <h5 class="product-title font-alt"><a>분석완료</a></h5>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: right;">
+                        <button class="btn btn-b btn-round" type="submit" style=" width: 100px"><a style="color: white;">삭제</a></button>&nbsp;
+                        <button class="btn btn-b btn-round" type="submit"  style=" width: 100px"><a href="write" style="color: white;">글쓰기</a></button>&nbsp;
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center">
+            <hr class="divider-w">
+            <div class="pagination font-alt"><a href="#"><</a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"> > </a></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+
+
+
+<th:block th:replace="fragment/footer :: footerFragment"></th:block>
+
+
+<script>
+    const loadingModal = document.querySelector('.loadingModal');
+    const btnOpenPopup = document.querySelector('.btn-open-popup');
+    const btnClose = document.querySelector('.close');
+
+    btnOpenPopup.addEventListener('click', () => {
+        loadingModal.style.display = 'block';
+    });
+
+    btnClose.addEventListener('click', () => {
+        loadingModal.style.display = 'none';
+    });
+
+
+</script>
+
+<div id="loadingModal" class="modal" >
+    <div class="modal_body">
+    <div class="search-modal-content">
+        <p><button type="button" class="close" data-dismiss="modal">X</button></p>
+        <div class="page-header">
+            <h1>로딩중</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="content-box-image"><img src="/resources/assets/images/loading.gif" /></div>
+                        <h2>분석중입니다. 잠시만 기다려주세요</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="/resources/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link href="/resources/assets/css/style.css" rel="stylesheet">
+    <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
+</head>
+
+
+<style>
+    .video{
+        text-aglin:center;
+        display:inline-block;
+    }
+    .result{
+        display:inline-block;
+    }
+
+
+    body,.main{
+        padding-right: 0 !important;
+    }
+    .modal-open { padding-right: 0px !important; }
+    .modal { padding-right: 0px !important; }
+    .panel-body{
+        font-size: 20px;
+    }
+
+
+</style>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+
+<th:block th:replace="fragment/head :: headFragment"></th:block>
+
+<div class="main">
+    <section class="module">
+        <div class="container">
+            <div class="row">
+            </div>
+                <section class="module-medium" id="contact">
+                    <h1></h1>
+                </section>
+            <h2 style="text-align: center;color:black; letter-spacing: 7px; font-size: 35px ">결과보기</h2>
+            <br>
+            <hr class="divider-w pt-20">
+
+            <div class="row">
+                <div class="col-sm-6" style="margin-top: 3%; margin-left: 7%">
+                <video width="100%" height="100%" controls>
+                    <source  src="/resources/assets/images/accident.mp4" type="video/mp4">
+                이 브라우저에서 지원하지 않는 영상입니다.
+                </video>
+                    </div>
+                <div class="col-sm-4">
+                <div class="chart"><canvas  id="pie-chart" ></canvas></div>
+                    </div>
+            </div>
+
+        </div>
+
+    </section>
+<section class="module">
+    <div class="container">
+        <div class="row">
+                <div role="tabpanel">
+                    <ul class="nav nav-tabs font-alt" role="tablist">
+                        <!--<li class="active"><a href="#support" data-toggle="tab"><span class="icon-tools-2"></span>support</a></li>-->
+                        <li class="active"><a href="#sales" data-toggle="tab"><span class="icon-tools-2"></span>판례</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="hidden" id="support">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">판례 1</a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse in" id="support1">
+                                        <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">판례 2</a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="support2">
+                                        <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 판례는 여기에 적용하기!!!!-->
+                        <div class="tab-pane active" id="sales">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#sales1" style="font-size: 14px">판례 1</a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="sales1">
+                                        <div class="panel-body">
+                                            <p style="color: black">청구차량 30% : 피청구차량 70%</p>
+                                            <a class="font-alt">◆ 심의접수번호 2016-020301</a><br><a class="font-alt">주간에 신호등 있는 사거리교차로에서 청구차량 우측에서 황색신호에 직진 중, 피청구차량 좌측에서 적색신호에 직진하다가 피청구차량의 전면부와 청구차량의 좌측후면부가 충돌한 사고. 피청구차량 적색신호에 진입한 점, 파손부위 등 감안</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#sales2" style="font-size: 14px" >판례 2</a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="sales2">
+                                        <div class="panel-body"> ◆ 심의접수번호 2016-021767 <br>주간에 신호등 있는 사거리교차로에서 청구차량 좌측에서 황색 점멸신호에 직진 중, 피청구차량 우측에서 적색 점멸신호에 직진하다가 피청구차량의 좌측면과 청구차량의 전면부가 충돌한 사고. 피청구차량 적색 점멸신호에 진행한 점 감안
+                                            (청구차량 30% : 피청구차량 70%)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+    <a>
+        <button class="btn btn-b btn-round" type="submit" style="height: 45px; font-size: 23px; margin-right: 30px;padding-bottom:40px">메인페이지</button>
+    </a>
+    <a>
+        <button class="btn btn-b btn-round" type="submit" style="height: 45px; font-size: 23px;padding-bottom:40px">&nbsp공유하기&nbsp</button>
+    </a>
+    </div>
+</section>
+
+</div>
+
+    </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+<script>
+    new Chart(document.getElementById("pie-chart"), {
+        type: 'pie',
+        data: {
+            labels: ["A", "B"],
+            datasets: [{
+                display: true,
+                backgroundColor: [ "#FF9F29","#5D8DFD"],
+                data: [20,80],
+            }],
+
+        },
+        options: {
+            title: {
+                display: true,
+                text: '적용과실',
+                fontSize: 15,
+            },
+
+        },
+
+    });
+
+</script>
+<script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
+<script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/resources/assets/lib/wow/dist/wow.js"></script>
+<script src="/resources/assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+<script src="/resources/assets/lib/isotope/dist/isotope.pkgd.js"></script>
+<script src="/resources/assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="/resources/assets/lib/flexslider/jquery.flexslider.js"></script>
+<script src="/resources/assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="/resources/assets/lib/smoothscroll.js"></script>
+<script src="/resources/assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<script src="/resources/assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+<script src="/resources/assets/js/plugins.js"></script>
+<script src="/resources/assets/js/main.js"></script>
+</body>
+</html>

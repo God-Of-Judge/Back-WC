@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <property name="LOG_PATH" value="${LOG_PATH}"/>
+    <property name="LOG_FILE" value="${LOG_FILE}"/>
+    <property name="LOG_PATH_NAME" value="${LOG_PATH}/${LOG_FILE}" />
+    <property name="EXCEPTION_LOG_FILE" value="${LOG_PATH_NAME}" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="COMN_EXP_APPENDER"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${EXCEPTION_LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <springProfile name="local">
+        <property name="WARN_LOG_FILE" value="${LOG_PATH}/local_warn" />
+        <property name="SQLEXCEPTION_LOG_FILE" value="${LOG_PATH}/local_jdbc" />
+    </springProfile>
+    <springProfile name="test">
+        <property name="WARN_LOG_FILE" value="${LOG_PATH}/test_warn" />
+        <property name="SQLEXCEPTION_LOG_FILE" value="${LOG_PATH}/test_jdbc" />
+    </springProfile>
+    <appender name="WARN_APPENDER"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${WARN_LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <appender name="SQL_EXP_APPENDER"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${SQLEXCEPTION_LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+
+    <springProfile name="local">
+        <logger name="jdbc" level="error" additivity="true">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="java.sql" level="error" additivity="true">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.sqlonly" level="info" additivity="true">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.resultset" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.audit" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.connection" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.sqltiming" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.resultsettable" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <root level="error">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="COMN_EXP_APPENDER"/>
+        </root>
+        <root level="warn">
+            <appender-ref ref="WARN_APPENDER"/>
+        </root>
+    </springProfile>
+    <springProfile name="test">
+        <logger name="jdbc" level="error" additivity="true">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="java.sql" level="error" additivity="true">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.sqlonly" level="info" additivity="true">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.resultset" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.audit" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.connection" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.sqltiming" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <logger name="jdbc.resultsettable" level="error" additivity="false">
+            <appender-ref ref="SQL_EXP_APPENDER" />
+        </logger>
+        <root level="error">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="COMN_EXP_APPENDER"/>
+        </root>
+        <root level="warn">
+            <appender-ref ref="WARN_APPENDER"/>
+        </root>
+    </springProfile>
+</configuration>

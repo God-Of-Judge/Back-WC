@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Default stylesheets-->
+    <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template specific stylesheets-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="/resources/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Main stylesheet and color file-->
+    <link href="/resources/assets/css/style.css" rel="stylesheet">
+    <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
+
+    <!-- 모달 라이브러리 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+</head>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+<style>
+    /* modal position(center)*/
+    .modal {
+        text-align: center;
+        margin-top: 300px;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        .modal:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: " ";
+        }
+    }
+    .modal-dialog {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    @font-face {
+        font-family: 'Happiness-Sans-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .modal_body{
+        background-color: white;
+    }
+
+
+    h2{
+        font-family: 'Happiness-Sans-Title',serif;
+        text-align: center;
+        font-size: 50px;
+        color: #0096d6;
+    }
+    body,.main{
+        padding-right: 0 !important;
+    }
+    .modal-open { padding-right: 0px !important; }
+    .modal { padding-right: 0px !important; }
+
+    pre{
+        height: 500px;
+        text-align: center;
+        align-items: center;
+        overflow-y: hidden;
+    }
+    P{
+        font-size: 20px;
+    }
+    table {
+        width: 100%;
+    }
+
+    tr{
+        border: 1px solid #ccc;
+
+    }
+
+    th,td{
+        font-size: 25px;
+        text-align: center;
+        padding: 15px 25px 15px;
+    }
+    a{
+        color: black;
+    }
+
+    .time{
+        padding: 10px 25px 10px;
+    }
+
+
+</style>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
+
+<th:block th:replace="fragment/head :: headFragment"></th:block>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
+
+<div class="main" style="background-color: #f9f9f9">
+    <section class="module">
+        <div class="container">
+            <div class="row">
+            </div>
+            <section class="module-medium" id="contact">
+                <h1></h1>
+            </section>
+            <h2 style="text-align: center; color: black;letter-spacing: 4px; font-size: 40px ">업로드</h2>
+                    <br>
+                    <hr class="divider-w pt-20">
+                    <div class="row" >
+                    <!--이미지 파일 첨부-->
+                        <pre id="file">
+                            <br>
+                            <br>
+                            <br>
+                            <img src="/resources/assets/images/file.png" style="margin-left: -150px"/>
+                               <i class=" fa-folder-o"></i><p>파일을 업로드해주세요</p>
+                                <div style="margin-left: 450px; font-size: 20px">
+                                    <input id="input_p" type="file" name="file" >
+                                </div>
+                        </pre>
+                        <form>
+                        <table>
+                            <tr>
+                                <th colspan="2" style="font-size: 30px"> 사고시점 입력</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="btn_slct_area">
+                                        <input type="hidden" name="locWantKey" id="locWantKey">
+                                        <input type="hidden" name="locWant" id="locWant">
+                                    </div>
+                                </td>
+                                <div class="normal_pop_wrap want_loc hidden">
+                                </div>
+                                <td><input class="time" type="time" style="margin-left: 200px" step="1"/><a class="font-alt"> ~ </a> <input class="time" type="time" step="1"/></td>
+                                <td>영상전체&nbsp;&nbsp;<input type="checkbox" ></td>
+                            </tr>
+                        </table>
+                    </form>
+                        <div style="text-align: center;">
+                            <br>
+                            <br>
+                        <button class="btn btn-b btn-round" type="submit"  style=" width: 300px;height: 60px"><a class="font-alt" href="write" style="color: white;font-size: 25px">업로드</a></button>&nbsp
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+
+        </div>
+    </section>
+
+
+</main>
+
+<script>
+    $(document).ready(function () {
+        $('input.timepicker').timepicker({
+            timeFormat: 'HH:mm:ss',
+            interval: 1,
+            startTime: '00:00:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true
+        });
+    })
+</script>
+
+<script>
+    const uploadModal = document.querySelector('upload_modal');
+    const btnOpenPopup = document.querySelector('.btn-open-popup');
+    const btnClose = document.querySelector('.close');
+
+    btnOpenPopup.addEventListener('click', () => {
+        uploadModal.style.display = 'block';
+    });
+
+    btnClose.addEventListener('click', () => {
+        uploadModal.style.display = 'none';
+    });
+
+
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+<script type="text/javascript" th:src="${@versionComponent.getVersion('/resources/build/time.bundle.js')}"></script>
+
+<!--
+
+ 업로드 모달
+<div class="modal" id="uploadModal">
+    <div class="modal_body">
+        <button type="button" class="close" data-dismiss="modal">X</button>
+        <h3>공유하시겠습니까?</h3>
+        <button class="btn btn-b btn-round"><a href="myList" style="color: white">결과확인</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-b btn-round"><a href="write" style="color: white">공유하기</a></button></div>
+</div>
+</div>
+-->
+
+
+</body>
+</html>

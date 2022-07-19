@@ -1,0 +1,37 @@
+<div class="pop" id="{{ id }}">
+	<div class="pop__bg"></div>
+	<div class="pop__layer">
+		<div class="pop_alert">
+			<div class="pop_alert__container">
+				<div class="pop_alert__content">
+					{{ if title != ""}}
+					<div class="pop_alert__tit mb12"><span class="fc20">{{@ title }}</span></div>
+					{{ /if }}
+					<div class="pop_alert__txt_box">
+						{{ if contents != ""}}
+							<p class="fs14 fc20">{{@ contents }}</p>
+						{{ /if }}
+						{{ if subContents != "" }}
+							<p class="fs14 fc50">{{@ subContents }}</p>
+						{{ /if }}
+					</div>
+				</div>
+				{{ if footer != "" }}
+					<div class="hr mt16"></div>
+					<div class="pop_alert__txt_box mt16">
+						<p class="fs13 fc90">{{@ footer }}</p>
+					</div>
+				{{ /if }}
+				<div class="pop_alert__btn_wrap">
+					<a class="btn__btn_line btn__btn_line-m mr8 btnConfirm" data-pos="left">
+						<span class="btn__btn_line_txt">{{ leftBtnNm }}</span>
+					</a>
+					<a class="btn__btn_default btn__btn_default-m btnConfirm" data-pos="right">
+						<span class="btn__btn_default_txt">{{ rightBtnNm }}</span>
+					</a>
+				</div>
+				<a class="pop_alert__btn_cls btnConfirm" data-pos="left"><span class="pop_alert__ico_cls"></span></a>
+			</div>
+		</div>
+	</div>
+</div>

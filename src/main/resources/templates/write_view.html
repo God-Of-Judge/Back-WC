@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Default stylesheets-->
+    <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template specific stylesheets-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="/resources/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Main stylesheet and color file-->
+    <link href="/resources/assets/css/style.css" rel="stylesheet">
+    <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
+
+    <!-- 모달 라이브러리 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+  <style>
+    #form-commentInfo{
+      width: 100%;
+    }
+
+    #comment-count{
+      margin-bottom: 10px;
+    }
+
+    #comment-input{
+      width: 50%;
+      height: 3.3em;
+    }
+
+    #submit{
+      background-color: rgb(0, 128,255);
+      width: 5.5em;
+      height: 3.3em;;
+      font-size: 15px;
+      font-weight: bold;
+      color: aliceblue;
+    }
+
+    #voteUp, #voteDown{
+      width: 3.5em;
+      height: 1.9em;
+      background-color: aqua;
+    }
+
+    #comments{
+      margin-top: 10px;
+    }
+
+    .eachComment{
+      width :50%;
+      margin: 10px;
+      padding: 0.5em;
+      border-bottom: 1px solid #c1bcba;
+    }
+
+    .eachComment .name{
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 0.3em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .eachComment .inputValue{
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    .eachComment .time{
+      font-size: 0.7em;
+      color: #c1bcba;
+      font-style: oblique;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+
+    }
+
+    .eachComment .voteDiv{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .eachComment .deleteComment{
+      background-color: red;
+      color: aliceblue;
+    }
+
+    .video-container {
+        position: relative;
+    }
+
+    module-medium{
+        margin-top: 50px;
+    }
+
+    textarea{
+        resize: none;
+    }
+
+    body,.main{
+        padding-right: 0 !important;
+    }
+    .modal-open { padding-right: 0px !important; }
+    .modal { padding-right: 0px !important; }
+
+
+    pre{
+        height: 500px;
+    }
+
+    .container{
+        padding: 0 !important;
+    }
+
+    .comment-author a,a{
+        color: black;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
+</style>
+
+
+  <th:block th:replace="fragment/head :: headFragment"></th:block>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
+
+  <main class="main" style="background-color: #f9f9f9">
+      <section class="module">
+          <div class="container">
+              <div class="row">
+                  <div>
+                      <div class="row" >
+
+                          <section class="module-medium" id="contact">
+                              <h1></h1>
+
+                          </section>
+                      </div>
+                      <h2 style="text-align: center; color: black;letter-spacing: 4px; font-size: 40px ">게시물보기</h2>
+                      <br>
+                      <br>
+                      <hr class="divider-w pt-20">
+                      <h3>교통사고 질문드립니다. </h3>
+                      <br class="divider-w mt-10 mb-20">
+                      <p style="color:gray; text-align: right"> 동현님 &nbsp;&nbsp;&nbsp;  | 2020.09.10 | </p>
+                      <hr class="divider-w mt-10 mb-20">
+                <form class="form" role="form">
+                  <div class="form-group">
+                     <!-- <div class="video-box-icon"><a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><span class="icon-video"></span></a></div>-->
+                            <video width="100%" controls><source  src="/resources/assets/images/accident.mp4" type="video/mp4">
+                          이 브라우저에서 지원하지 않는 영상입니다.
+                      </video>
+                    </div>
+                </form>
+                  <pre style="font-size: 20px"> 오늘 사고가 났습니다.</pre>
+                  <p></p>
+                  <div class="comments">
+                      <div class="container">
+                        <div class="row">
+                                <h4 class="comment-title font-alt">댓글</h4>
+                    <div class="comment clearfix">
+                      <div class="comment-avatar">  <div class="comment-author font-alt"><a>동현</a></div></div>
+                      <div class="comment-content clearfix">
+
+                        <div class="comment-body">
+                          <p>무섭네요...</p>
+                        </div>
+                        <div class="comment-meta font-alt">Today, 14:55 - <a class="font-alt" href="#">Reply</a>
+                        </div>
+                      </div>
+                      <div class="comment clearfix">
+                        <div class="comment-avatar">  <div class="comment-author font-alt"><a>영광</a></div></div>
+                        <div class="comment-content clearfix">
+
+                          <div class="comment-body">
+                            <p>그러게요. 운전을 하시면 안될 것 같은데...</p>
+                          </div>
+                          <div class="comment-meta font-alt">Today, 15:34 - <a class="font-alt"  href="#">Reply</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comment clearfix">
+                      <div class="comment-avatar"> <div class="comment-author font-alt"><a href="#">우철</a></div></div>
+                      <div class="comment-content clearfix">
+                        <div class="comment-body">
+                          <p>대단하다....</p>
+                        </div>
+                        <div class="comment-meta font-alt">Today, 14:59 - <a class="font-alt"  href="#">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
+                            </div>
+                            <button class="btn btn-round btn-d" type="submit">작성</button>
+                            <p></p>
+                            <p></p>
+                  </div>
+
+                </form>
+            </div>
+
+
+                  </div>
+
+
+
+          </div>
+    </div>
+
+                  </div>
+              </div>
+          <div style="text-align: center">
+              <button class="btn btn-b btn-round" type="submit"  style=" width: 200px;height: 50px"><a class="font-alt" href="write" style="color: white;font-size: 20px">돌아가기</a></button>&nbsp
+          </div>
+
+      </section>
+
+
+  </main>
+
+
+
+<script>
+  function showComment(comment){
+    const userName = document.createElement('div');
+    const inputValue = document.createElement('span');
+    const showTime = document.createElement('div');
+    const voteDiv = document.createElement('div');
+    const countSpan = document.createElement('span')
+    const voteUp = document.createElement('button');
+    const voteDown = document.createElement('button');
+    const commentList = document.createElement('div');  //이놈이 스코프 밖으로 나가는 순간 하나지우면 다 지워지고 입력하면 리스트 다불러옴.
+    //삭제버튼 만들기
+    const delBtn = document.createElement('button');
+    delBtn.className ="deleteComment";
+    delBtn.innerHTML="삭제";
+    commentList.className = "eachComment";
+    userName.className="name";
+    inputValue.className="inputValue";
+    showTime.className="time";
+    voteDiv.className="voteDiv";
+    //유저네임가져오기
+    userName.innerHTML = generateUserName();
+    userName.appendChild(delBtn);
+    //입력값 넘기기
+    inputValue.innerText = comment;
+    //타임스템프찍기
+    showTime.innerHTML = generateTime();
+    countSpan.innerHTML=0;
+    //투표창 만들기, css먼저 입혀야함.
+    voteUp.id = "voteUp";
+    voteUp.innerHTML = '↑';
+    voteDown.id = "voteDown";
+    voteDown.innerHTML = '↓';
+    voteDiv.appendChild(voteUp);
+    voteDiv.appendChild(voteDown);
+
+    //댓글뿌려주기
+    commentList.appendChild(userName);
+    commentList.appendChild(inputValue);
+    commentList.appendChild(showTime);
+    commentList.appendChild(voteDiv);
+    rootDiv.prepend(commentList);
+
+    voteUp.addEventListener("click",numberCount);
+    voteDown.addEventListener("click",numberCount);
+    delBtn.addEventListener("click",deleteComments);
+    console.dir(rootDiv);
+
+  }
+
+</script>
+
+    <!--    JavaScripts    -->
+    <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
+    <script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/resources/assets/lib/wow/dist/wow.js"></script>
+    <script src="/resources/assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+    <script src="/resources/assets/lib/isotope/dist/isotope.pkgd.js"></script>
+    <script src="/resources/assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="/resources/assets/lib/flexslider/jquery.flexslider.js"></script>
+    <script src="/resources/assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/resources/assets/lib/smoothscroll.js"></script>
+    <script src="/resources/assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/resources/assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="/resources/assets/js/plugins.js"></script>
+    <script src="/resources/assets/js/main.js"></script>
+  </body>
+</html>

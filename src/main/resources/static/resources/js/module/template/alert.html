@@ -1,0 +1,27 @@
+<div class="pop" id="{{ id }}">
+	<div class="pop__bg"></div>
+	<div class="pop__layer">
+		<div class="pop_alert">
+			<div class="pop_alert__container">
+				<div class="pop_alert__content">
+					<div class="pop_alert__tit mb12"><span class="fc20">{{@ title }}</span></div>
+					<div class="pop_alert__txt_box">
+						<p class="fs14 fc20">{{@ contents }}</p>
+						{{ if contents2 != ""}}
+						<p class="fs14 fc20">{{@ contents2 }}</p>
+						{{ /if }}
+						{{ if subContents != ""}}
+							<p class="fs14 fc50">{{@ subContents }}</p>
+						{{ /if }}
+					</div>
+				</div>
+				<div class="pop_alert__btn_wrap alertBtn">
+					<a class="btn__btn_default btn__btn_default-m">
+						<span class="btn__btn_default_txt">{{ btnNm }}</span>
+					</a>
+				</div>
+				<a class="pop_alert__btn_cls alertBtn"><span class="pop_alert__ico_cls"></span></a>
+			</div>
+		</div>
+	</div>
+</div>

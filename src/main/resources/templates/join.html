@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Default stylesheets-->
+    <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template specific stylesheets-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="/resources/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Main stylesheet and color file-->
+    <link href="/resources/assets/css/style.css" rel="stylesheet">
+    <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
+
+    <!-- 모달 라이브러리 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+    #join_wrap {
+        width: 800px;
+        margin: 200px;
+    }
+
+    #join_wrap .title{
+        padding: 50px 0 20px;
+        font-size: 2em;
+    }
+    .joinTable th, joinTable td {
+        padding: 0px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .joinTable th {
+        text-align: center;
+        background-color: #cccccc;
+        width: 100px;
+
+    }
+
+    .joinTable .textForm {
+        width: 300px;
+        height: 30px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+    }
+
+
+    .joinTable textarea {
+        /*width: 420px;*/
+        height: 80px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .joinTable {
+        text-align: center;
+        margin: 13px -70px 40px 0px;
+    }
+
+    .btn_area button {
+        width: 150px;
+        height: 50px;
+        margin: 0 10px;
+        border: 0;
+        font-size: 20px;
+        position: static;
+        bottom: auto;
+        border-radius: 5px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    body {
+        text-align: -webkit-center;
+
+    }
+
+    section {
+        margin-top: -100px;
+        line-height: 80px;
+    }
+
+    input {
+        display: block;
+        width: 500px;
+    }
+
+
+    tr>td {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:replace="fragment/head :: headFragment"></th:block>
+
+<div class="main">
+    <section class="module">
+        <div class="container">
+            <div class="row">
+            </div>
+            <section class="module-medium" id="contact">
+                <h1></h1>
+            </section>
+            <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 35px ">회원가입</h2>
+            <br>
+            <hr class="divider-w pt-20">
+
+        <form class="joinForm">
+            <table class="joinTable">
+                <tr>
+                    <td><label for="user_id">아이디</label></td>
+                    <td class="td_long"><input type="text" id="user_id" class="textForm" placeholder="아이디를 입력하세요" required
+                                               autofocus>
+                    <td><button type="submit" class="btn btn-b btn-round">중복확인</button></td></td>
+                </tr>
+                <tr>
+                    <td><label for="user_pwd">비밀번호</label></td>
+                    <td><input type="password" id="user_pwd" class="textForm" placeholder="비밀번호를 입력하세요"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="user_tel">전화번호</label></td>
+                    <td><input type="tel" id="user_tel" class="textForm" placeholder="전화번호를 입력하세요"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="user_name">닉네임</label></td>
+                    <td><input type="text" id="user_name" class="textForm" placeholder="닉네임을 입력하세요"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <button type="submit" class="btn btn-b btn-round" style="width:100%">회원가입</button></td>
+                </tr>
+
+            </table>
+    </fieldset>
+    </form>
+    </div>
+                </div>
+            </div>
+</section>
+    </main>
+<script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
+<script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/resources/assets/lib/wow/dist/wow.js"></script>
+<script src="/resources/assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+<script src="/resources/assets/lib/isotope/dist/isotope.pkgd.js"></script>
+<script src="/resources/assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="/resources/assets/lib/flexslider/jquery.flexslider.js"></script>
+<script src="/resources/assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="/resources/assets/lib/smoothscroll.js"></script>
+<script src="/resources/assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<script src="/resources/assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+<script src="/resources/assets/js/plugins.js"></script>
+<script src="/resources/assets/js/main.js"></script>
+</body>
+</html>
