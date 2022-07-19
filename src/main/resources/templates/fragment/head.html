@@ -127,8 +127,8 @@
                             <li><a href="join_edit">회원정보수정</a></li>
                         </ul>
                     </li>
-                    <li><a data-toggle="modal" href="#loginModal"> | 로그인</a></li>
-                    <li class="hidden"><a > | 로그아웃</a></li>
+                    <li th:if="${#request.getCookies()== null}"><a data-toggle="modal" href="#loginModal"> | 로그인</a></li>
+                    <li th:if="${#request.getCookies()!= null}"><a th:href="@{/logout}"> | 로그아웃</a></li>
                 </ul>
         </div>
         </div>

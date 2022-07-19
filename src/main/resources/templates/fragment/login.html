@@ -27,17 +27,17 @@
 <th:block th:fragment="setLogin(login)">
   <body>
   <div class="member_login">
-    <form th:action="@{/auth/loginProc}" th:method="POST">
+    <form th:action="@{/loginComplete}" th:method="POST">
           <div class="row" style="text-align: center">
             <div class="col-sm-5 col-sm-offset-1 mb-sm-40" style="margin-left:30%">
               <h4 class="font-alt">Login</h4>
               <hr class="divider-w mb-10">
               <form class="form">
                 <div class="form-group">
-                  <input class="form-control" id="username" type="text" name="username" placeholder="아이디"/>
+                  <input class="form-control" id="username" type="text" name="mbId" placeholder="아이디"/>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="password" type="password" name="password" placeholder="비밀번호"/>
+                  <input class="form-control" id="password" type="password" name="mbPw" placeholder="비밀번호"/>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-round btn-b" style="width: 100%; height: 50px">Login</button>

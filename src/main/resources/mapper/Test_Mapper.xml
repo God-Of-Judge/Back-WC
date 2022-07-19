@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smart.project.proc.Test" >
-    <select id="sqlMenu2" resultType="com.smart.project.web.home.vo.TestVO" parameterType="java.lang.String">
-        SELECT * FROM test;
-    </select>
-
-    <select id="sqlFind" resultType="com.smart.project.web.home.vo.StudyTestVO">
-        SELECT * FROM test;
-    </select>
-
-    <insert id="joinComplete" parameterType="com.smart.project.web.home.vo.JoinVO">
-        INSERT INTO member
-        VALUES(#{id}, #{email}, #{pw},#{nick},#{gender},#{birth},#{locWantKey},#{wantLoc});
-    </insert>
-
-    <select id="memberFind" resultType="com.smart.project.web.home.vo.JoinVO">
-        SELECT * FROM member;
-    </select>
-
-    <select id="login" resultType="com.smart.project.web.home.vo.JoinVO" parameterType="com.smart.project.web.home.vo.JoinVO">
-        SELECT * FROM member
-        where id=#{id} and email=#{email} and pw=#{pw};
+    <select id="login" resultType="com.smart.project.web.home.vo.MemberVO" parameterType="com.smart.project.web.home.vo.MemberVO">
+        SELECT * FROM t_member
+        where mb_id=#{mbId} and mb_pw=#{mbPw};
     </select>
 
 </mapper>
