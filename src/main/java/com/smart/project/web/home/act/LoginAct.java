@@ -75,7 +75,7 @@ public class LoginAct {
 
     @RequestMapping("/kakao")
     public String kakao(){
-        return "redirect:https://kauth.kakao.com/oauth/authorize?client_id=9b950cc68d2820a3e85047db80f55d96&redirect_uri=http://localhost/kakaoLogin&response_type=code";
+        return "redirect:https://kauth.kakao.com/oauth/authorize?client_id=d063d1ad6b1c07a4bd10a0c8fa990556&redirect_uri=http://localhost/kakaoLogin&response_type=code";
     }
 
     @RequestMapping("/kakaoLogin")
@@ -97,7 +97,7 @@ public class LoginAct {
     @RequestMapping("/kakaoLogout")
     public String kakaoLogout(){
 
-        return "redirect:https://kauth.kakao.com/oauth/logout?client_id=9b950cc68d2820a3e85047db80f55d96&logout_redirect_uri=http://localhost/main";
+        return "redirect:https://kauth.kakao.com/oauth/logout?client_id=d063d1ad6b1c07a4bd10a0c8fa990556&logout_redirect_uri=http://localhost/main";
 
     }
 

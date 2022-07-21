@@ -32,7 +32,7 @@ public class MemberService {
             StringBuilder sb = new StringBuilder();
             sb.append("grant_type=authorization_code");
 
-            sb.append("&client_id=9b950cc68d2820a3e85047db80f55d96"); //본인이 발급받은 key
+            sb.append("&client_id=d063d1ad6b1c07a4bd10a0c8fa990556"); //본인이 발급받은 key
             sb.append("&redirect_uri=http://localhost/kakaoLogin"); // 본인이 설정한 주소
 
             sb.append("&code=" + authorize_code);
